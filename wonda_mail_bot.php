@@ -7,8 +7,8 @@ use PHPMailer\PHPMailer\Exception;
 
 //Load Composer's autoloader
 require 'vendor/autoload.php';
-/*print_r($_POST);die;
-$content="";*/
+print_r($_POST);die;
+$content="";
 foreach($_POST as $key=>$value){
     $content.=$key.": ".$value;
 
