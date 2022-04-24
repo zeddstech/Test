@@ -37,7 +37,7 @@ try {
     $mail->Body    = $content;
 
     $mail->send();
-    header("Location: index.html");
+    header("Location: done.php");
         exit();
     echo 'Message has been sent';
 } catch (Exception $e) {
