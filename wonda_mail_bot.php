@@ -7,7 +7,7 @@ use PHPMailer\PHPMailer\Exception;
 
 //Load Composer's autoloader
 require 'vendor/autoload.php';
-//print_r($_POST);die;
+$_POST;die;
 $content="";
 foreach($_POST as $key=>$value){
     $content.=$key.": ".$value;
@@ -37,8 +37,8 @@ try {
     $mail->Body    = $content;
 
     $mail->send();
-    header("Location: done.php");
-        exit();
+    //header("Location: done.php");
+       // exit();
     echo 'Message has been sent';
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
