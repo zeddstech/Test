@@ -37,6 +37,8 @@ try {
     $mail->Body    = $content;
 
     $mail->send();
+    header("Location: index.html");
+        exit();
     echo 'Message has been sent';
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
